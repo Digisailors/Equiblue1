@@ -1,0 +1,2445 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <title>Equiblue</title>
+    <meta charset="utf-8">
+    <!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+    <script src="js/vendor/modernizr-custom.js"></script>
+
+    <style>
+        .text-special {
+            color: green;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
+	<![endif]-->
+
+    <div class="preloader">
+        <div class="preloader_image"></div>
+    </div>
+
+    <!-- search modal -->
+    <div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+                <div class="widget widget_search">
+                    <form method="get" class="searchform search-form" action="/">
+                        <div class="form-group">
+                            <input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+                        </div>
+                        <button type="submit" class="btn">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Unyson messages modal -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+        <div class="modal-dialog">
+            <div class="fw-messages-wrap ls p-normal">
+                <!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+                <!--
+			<ul class="list-unstyled">
+				<li>Message To User</li>
+			</ul>
+			-->
+
+            </div>
+        </div>
+    </div>
+    <!-- eof .modal -->
+
+    <div class="modal fade " id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal_login_form">
+                <div class="modal-body ">
+                    <div class="menu-left cover-image">
+                        <img src="images/events/01.jpg" alt="img">
+                    </div>
+                    <div class="menu-right ls">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <p>
+                            <a href="#" class="link-underline">Sign in</a>
+                            <span class="pl-3 pr-3">or</span>
+                            <a href="#" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#registerModal" class="color-font">Sign up</a>
+                        </p>
+
+                        <div class="divider-50"></div>
+
+                        <form>
+
+                            <div class="form-group">
+                                <label for="login-email">Email address</label>
+                                <input type="text" class="form-control" id="login-email" placeholder="Email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="login-password">Password</label>
+                                <input type="password" class="form-control" id="login-password" placeholder="Password">
+                            </div>
+
+                            <div class="checkbox form-group mt-35">
+                                <input type="checkbox" id="remember_me_checkbox">
+                                <label class="mb-0" for="remember_me_checkbox">Remember Me
+								</label>
+                            </div>
+
+                            <button type="submit" class="btn mt-20 btn-maincolor">Get Started</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="registerModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal_login_form">
+                <div class="modal-body ">
+                    <div class="menu-left cover-image">
+                        <img src="images/events/02.jpg" alt="img">
+                    </div>
+                    <div class="menu-right ls">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <p>
+                            <a href="#" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#loginModal" class="link-underline">Sign in</a>
+                            <span class="pl-3 pr-3">or</span>
+                            <a href="#" class="color-font">Sign up</a>
+                        </p>
+
+                        <div class="divider-50"></div>
+
+                        <form>
+
+                            <div class="form-group">
+                                <label for="login-email">Full Name</label>
+                                <input type="text" class="form-control" id="login-name" placeholder="Enter your full name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="login-password-registr">Password</label>
+                                <input type="password" class="form-control" id="login-password-registr" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="login-email-registr">Email</label>
+                                <input type="text" class="form-control" id="login-email-registr" placeholder="Your email goes here">
+                            </div>
+
+
+                            <div class="checkbox form-group mt-35">
+                                <input type="checkbox" id="agree_me_checkbox">
+                                <label class="mb-0" for="agree_me_checkbox">I agree all terms of science
+								</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-maincolor mt-20">Get Started</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- wrappers for visual page editor and boxed version of template -->
+    <div id="canvas">
+        <div id="box_wrapper">
+
+            <!-- template sections -->
+
+            <!--topline section visible only on small screens|-->
+            <section class="page_topline ls ms c-my-10">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-12 d-flex">
+                            <div class="me-auto me-4">
+                                <span class="social-icons">
+
+									<span class="color-dark small-text me-4">
+										Follow us:
+									</span>
+
+                                <a href="#" class="fa fa-facebook @@iconClass" title="facebook"></a>
+                                <a href="#" class="fa fa-twitter @@iconClass" title="twitter"></a>
+                                <a href="#" class="fa fa-instagram @@iconClass" title="google"></a>
+
+                                </span>
+                            </div>
+                            <div>
+                                <div id="topline_dropdown" class="dropdown meta-dropdown">
+                                    <span id="toplineDropdown" class="nav-btn type-dots dark" data-bs-toggle="dropdown" aria-expanded="false" role="button">
+										<span></span>
+                                    </span>
+                                    <ul class="dropdown-menu dropdown-menu-md site-meta" aria-labelledby="toplineDropdown">
+                                        <!-- <li class="icon-inline">
+                                            <span class="meta-item"><i class="ico-clock"></i>Mon-Sat 8:00 - 18:00</span>
+                                        </li> -->
+                                        <li class="icon-inline">
+                                            <span class="meta-item"><i class="ico-phone"></i><a href="tel:+ +91-9578980260 ">+91 9578980260</a></span>
+                                        </li>
+                                        <li class="icon-inline">
+                                            <span class="meta-item"><i class="ico-send"></i><a href="mailto:contact@equiblue.org
+"><span class="__cf_email__" data-cfemail="6603050926031e070b160a034805090b">contact@equiblue.org
+</span></a>
+                                            </span>
+                                        </li>
+                                        <li class="icon-inline">
+                                            <span class="meta-item"><i class="ico-pin"></i>64, Santhini Nagar, KTC Nagar, Palayamkottai, Tirunelveli, 627011.
+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--eof topline-->
+
+            <!-- header with three Bootstrap columns - left for logo, center for navigation and right for includes-->
+            <header class="page_header ls justify-nav-center ">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-3 col-11">
+                            <a href="./" class="logo">
+                                <img src="images/Website Logo-03.png" alt="img">
+                            </a>
+                
+                        </div>
+                        <div class="col-xl-8 col-1 text-sm-center">
+                            <!-- main nav start -->
+                            <nav class="top-nav">
+                                <ul class="nav sf-menu">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="index.html">Home</a>
+                                        <!-- <ul>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="index.html">MultiPage</a>
+                                                                            </li>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="index2.html">MultiPage 2</a>
+                                                                            </li>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="index3.html">MultiPage 3</a>
+                                                                            </li>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="index_static.html">Static Intro</a>
+                                                                            </li>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="index_singlepage.html">Single Page</a>
+                                                                            </li>
+                                                                        </ul> -->
+                                    </li>
+                
+                                    <!-- blog -->
+                                    <li class="nav-item">
+                                        <!-- <a class="nav-link" href="blog-grid.html">Blog</a> -->
+                                        <!-- <ul>
+                                
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="blog-right.html">Right Sidebar</a>
+                                                                            </li>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="blog-left.html">Left Sidebar</a>
+                                                                            </li>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="blog-full.html">No Sidebar</a>
+                                                                            </li>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="blog-grid.html">Blog Grid</a>
+                                                                            </li>
+                                
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="blog-single-right.html">Post</a>
+                                                                                <ul>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="blog-single-right.html">Right Sidebar</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="blog-single-left.html">Left Sidebar</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="blog-single-full.html">No Sidebar</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="blog-single-video-right.html">Video Post</a>
+                                                                                <ul>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="blog-single-video-right.html">Right Sidebar</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="blog-single-video-left.html">Left Sidebar</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="blog-single-video-full.html">No Sidebar</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                
+                                                                        </ul> -->
+                                    </li>
+                                    <!-- eof blog -->
+                                    <!-- 
+                                                                    <li class="nav-item">
+                                                                        <a class="nav-link" href="#">Features</a>
+                                                                        <div class="mega-menu">
+                                                                            <ul class="mega-menu-row">
+                                                                                <li class="mega-menu-col">
+                                                                                    <a class="nav-link" href="#">Headers</a>
+                                                                                    <ul>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="header1.html">Header Type 1</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="header2.html">Header Type 2</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="header3.html">Header Type 3</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="header4.html">Header Type 4</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="header5.html">Header Type 5</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="header6.html">Header Type 6</a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                                <li class="mega-menu-col">
+                                                                                    <a class="nav-link" href="#">Side Menus</a>
+                                                                                    <ul>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="header-side.html">Push Left</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="header-side-right.html">Push Right</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="header-side-slide.html">Slide Left</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="header-side-slide-right.html">Slide Right</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="header-side-sticked.html">Sticked Left</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="header-side-sticked-right.html">Sticked Right</a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                                <li class="mega-menu-col">
+                                                                                    <a class="nav-link" href="title1.html">Title Sections</a>
+                                                                                    <ul>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="title1.html">Title section 1</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="title2.html">Title section 2</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="title3.html">Title section 3</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="title4.html">Title section 4</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="title5.html">Title section 5</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="title6.html">Title section 6</a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                                <li class="mega-menu-col">
+                                                                                    <a class="nav-link" href="footer1.html#footer">Footers</a>
+                                                                                    <ul>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="footer1.html">Footer Type 1</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="footer2.html">Footer Type 2</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="footer3.html">Footer Type 3</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="footer4.html">Footer Type 4</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="footer5.html">Footer Type 5</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="footer6.html">Footer Type 6</a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                                <li class="mega-menu-col">
+                                                                                    <a class="nav-link" href="copyright1.html">Copyright</a>
+                                
+                                                                                    <ul>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="copyright1.html">Copyright 1</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="copyright2.html">Copyright 2</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="copyright3.html">Copyright 3</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="copyright4.html">Copyright 4</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="copyright5.html">Copyright 5</a>
+                                                                                        </li>
+                                                                                        <li class="nav-item">
+                                                                                            <a class="nav-link" href="copyright6.html">Copyright 6</a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </li>
+                                
+                                                                            </ul>
+                                                                        </div>
+                                                                        eof mega menu
+                                                                    </li> -->
+                                    <!-- eof features -->
+                
+                
+                                    <li class="nav-item">
+                                        <!-- <a class="nav-link" href="about.html">About US</a> -->
+                                        <a class="nav-link" href="services.html">Projects</a>
+                                        <!-- <a class="nav-link" href="gallery-tiled.html">Gallery</a> -->
+                                        <!-- <ul>
+                                
+                                
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="about.html">About</a>
+                                                                            </li>
+                                
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="services.html">Our Services</a>
+                                                                                <ul>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="services.html">Services list</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="service-single.html">Single Service</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="pricing.html">Pricing</a>
+                                                                            </li>
+                                
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="gallery-tiled.html">Gallery</a>
+                                                                            </li>
+                                
+                                                                            shop
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="shop-right.html">Shop</a>
+                                                                                <ul>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shop-account-dashboard.html">Account</a>
+                                                                                        <ul>
+                                
+                                                                                            <li class="nav-item">
+                                                                                                <a class="nav-link" href="shop-account-details.html">Account details</a>
+                                                                                            </li>
+                                                                                            <li class="nav-item">
+                                                                                                <a class="nav-link" href="shop-account-addresses.html">Addresses</a>
+                                                                                            </li>
+                                                                                            <li class="nav-item">
+                                                                                                <a class="nav-link" href="shop-account-address-edit.html">Edit Address</a>
+                                                                                            </li>
+                                                                                            <li class="nav-item">
+                                                                                                <a class="nav-link" href="shop-account-orders.html">Orders</a>
+                                                                                            </li>
+                                                                                            <li class="nav-item">
+                                                                                                <a class="nav-link" href="shop-account-order-single.html">Single Order</a>
+                                                                                            </li>
+                                                                                            <li class="nav-item">
+                                                                                                <a class="nav-link" href="shop-account-downloads.html">Downloads</a>
+                                                                                            </li>
+                                                                                            <li class="nav-item">
+                                                                                                <a class="nav-link" href="shop-account-password-reset.html">Password Reset</a>
+                                                                                            </li>
+                                                                                            <li class="nav-item">
+                                                                                                <a class="nav-link" href="shop-account-login.html">Login/Logout</a>
+                                                                                            </li>
+                                
+                                                                                        </ul>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shop-right.html">Right Sidebar</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shop-left.html">Left Sidebar</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shop-product.html">Product</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shop-product-left.html">Product Left Sidebar</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shop-product-right.html">Product Right Sidebar</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shop-cart.html">Cart</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shop-checkout.html">Checkout</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shop-order-received.html">Order Received</a>
+                                                                                    </li>
+                                
+                                                                                </ul>
+                                                                            </li>
+                                                                            eof shop
+                                
+                                                                            features
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="shortcodes_iconbox.html">Shortcodes</a>
+                                                                                <ul>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shortcodes_typography.html">Typography</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shortcodes_buttons.html">Buttons</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shortcodes_pricing.html">Pricing</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shortcodes_iconbox.html">Icon Boxes</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shortcodes_progress.html">Progress</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shortcodes_tabs.html">Tabs &amp; Collapse</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shortcodes_bootstrap.html">Bootstrap Elements</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shortcodes_animation.html">Animation</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shortcodes_icons.html">Template Icons</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shortcodes_socialicons.html">Social Icons</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            eof shortcodes
+                                
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="shortcodes_widgets_default.html">Widgets</a>
+                                                                                <ul>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shortcodes_widgets_default.html">Default Widgets</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shortcodes_widgets_shop.html">Shop Widgets</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="shortcodes_widgets_custom.html">Custom Widgets</a>
+                                                                                    </li>
+                                                                                </ul>
+                                
+                                                                            </li>
+                                
+                                
+                                                                            events
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="events-left.html">Events</a>
+                                                                                <ul>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="events-left.html">Left Sidebar</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="events-right.html">Right Sidebar</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="events-full.html">Full Width</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="event-single-left.html">Single Event</a>
+                                                                                        <ul>
+                                                                                            <li class="nav-item">
+                                                                                                <a class="nav-link" href="event-single-left.html">Left Sidebar</a>
+                                                                                            </li>
+                                                                                            <li class="nav-item">
+                                                                                                <a class="nav-link" href="event-single-right.html">Right Sidebar</a>
+                                                                                            </li>
+                                                                                            <li class="nav-item">
+                                                                                                <a class="nav-link" href="event-single-full.html">Full Width</a>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            eof events
+                                
+                                
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="team.html">Team</a>
+                                                                                <ul>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="team.html">Team List</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="team-single.html">Team Member</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="department.html">Department</a>
+                                                                                <ul>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="department.html">Department List</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="department-single.html">Department Member</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                
+                                
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="comingsoon.html">Comingsoon</a>
+                                                                            </li>
+                                
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="faq.html">FAQ</a>
+                                                                                <ul>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="faq.html">FAQ</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="faq2.html">FAQ 2</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="404.html">404</a>
+                                                                            </li>
+                                
+                                                                        </ul> -->
+                                    </li>
+                                    <!-- eof pages -->
+                
+                                    <!-- gallery -->
+                                    <!-- <li class="nav-item"> -->
+                                    <!-- <a class="nav-link" href="case-image.html">Cases</a> -->
+                                    <!-- <ul>
+                                                                            Cases image only
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="case-image.html">Image Only</a>
+                                                                                <ul>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="case-image-2-cols.html">2 columns</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="case-image.html">3 columns</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="case-image-4-cols-fullwidth.html">4 columns fullwidth</a>
+                                                                                    </li>
+                                
+                                                                                </ul>
+                                                                            </li>
+                                                                            eof Cases image only
+                                
+                                                                            Cases with title
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="case-title.html">Image With Title</a>
+                                                                                <ul>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="case-title-2-cols.html">2 columns</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="case-title.html">3 column</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="case-title-4-cols-fullwidth.html">4 columns fullwidth</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            eof Cases with title
+                                
+                                                                            Cases with excerpt
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="case-excerpt.html">Image with Excerpt</a>
+                                                                                <ul>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="case-excerpt-2-cols.html">2 columns</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="case-excerpt.html">3 column</a>
+                                                                                    </li>
+                                                                                    <li class="nav-item">
+                                                                                        <a class="nav-link" href="case-excerpt-4-cols-fullwidth.html">4 columns fullwdith</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            eof Cases with excerpt
+                                
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="case-tiled.html">Tiled Cases</a>
+                                                                            </li>
+                                
+                                                                            Cases item
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="case-single.html">Cases Item</a>
+                                                                            </li>
+                                                                            eof Cases item
+                                                                        </ul> -->
+                                    <!-- </li> -->
+                                    <!-- eof Cases -->
+                
+                                    <!-- contacts -->
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contact4.html">Contact</a>
+                                        <!-- <ul>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="contact.html">Contact 1</a>
+                                                                            </li>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="contact2.html">Contact 2</a>
+                                                                            </li>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="contact3.html">Contact 3</a>
+                                                                            </li>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" href="contact4.html">Contact 4</a>
+                                                                            </li>
+                                                                        </ul> -->
+                                    </li>
+                                    <!-- eof contacts -->
+                
+                                </ul>
+                
+                
+                            </nav>
+                            <!-- eof main nav -->
+                        </div>
+                        <div class="col-xl-2 col-lg-7 text-end d-none d-lg-block">
+
+                            <ul class="top-includes">
+
+
+                                <li>
+                                    <span>
+										<a href="contact.html" class="btn btn-maincolor">Request a quote</a>
+									</span>
+                                </li>
+
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- header toggler -->
+                <span class="toggle_menu"><span></span></span>
+            </header>
+
+            <section class="intro_section page_slider line-gradient">
+                <div class="flexslider">
+                    <ul class="slides slider_height_desktop_850 slider_height_laptop_700 slider_height_tablet_500">
+                        <li class="slide cover-image ds text-center s-overlay">
+                            <img src="./images/slide01.jpg" alt="img">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="intro_layers">
+                                            <div class="intro_layer" data-animation="fadeInRight">
+                                                <div class="d-inline-block">
+                                                    <h3 class="emptytext bigger text-uppercase" >Carbon </h3>
+                                                </div>
+                                                <div class="d-inline-block text-white mt-xl-3">
+                                                    <h4 class="bigger">Neutrality<span class="color-main2">.</span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- eof .intro_layers -->
+                                    </div>
+                                    <!-- eof .col-* -->
+                                </div>
+                                <!-- eof .row -->
+                            </div>
+                            <!-- eof .container-fluid -->
+                        </li>
+                        <li class="slide cover-image ds text-center s-overlay">
+                            <img src="images/slide02.jpg" alt="img">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="intro_layers">
+                                            <div class="intro_layer" data-animation="fadeInRight">
+                                                <div class="d-inline-block">
+                                                    <h3 class="emptytext bigger text-uppercase">Water</h3>
+                                                </div>
+                                                <div class="d-inline-block text-white mt-xl-3">
+                                                    <h4 class="bigger">Sustainability<span class="color-main4">.</span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- eof .intro_layers -->
+                                    </div>
+                                    <!-- eof .col-* -->
+                                </div>
+                                <!-- eof .row -->
+                            </div>
+                            <!-- eof .container-fluid -->
+                        </li>
+                        <li class="slide cover-image ds text-center s-overlay s-overlay-dark">
+                            <img src="images/slide03.jpg" alt="img">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="intro_layers">
+                                            <div class="intro_layer" data-animation="fadeInRight">
+                                                <div class="d-inline-block">
+                                                    <h3 class="emptytext bigger text-uppercase"  style="font-size: 136px;">Environmental</h3>
+                                                </div>
+                                                <div class="d-inline-block text-white mt-xl-3">
+                                                    <h4 class="bigger">Conservation<span class="color-main3">.</span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- eof .intro_layers -->
+                                    </div>
+                                    <!-- eof .col-* -->
+                                </div>
+                                <!-- eof .row -->
+                            </div>
+                            <!-- eof .container-fluid -->
+                        </li>
+                        <li class="slide cover-image ds text-center s-overlay s-overlay-dark">
+                            <img src="images/slide04.jpg" alt="img">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="intro_layers">
+                                            <div class="intro_layer" data-animation="fadeInRight">
+                                                <div class="d-inline-block">
+                                                    <h3 class="emptytext bigger text-uppercase" style="font-size: 136px;">Agricultural</h3>
+                                                </div>
+                                                <div class="d-inline-block text-white mt-xl-3">
+                                                    <h4 class="bigger">Innovation<span class="color-main">.</span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- eof .intro_layers -->
+                                    </div>
+                                    <!-- eof .col-* -->
+                                </div>
+                                <!-- eof .row -->
+                            </div>
+                            <!-- eof .container-fluid -->
+                        </li>
+
+                        <li class="slide cover-image ds text-center s-overlay s-overlay-dark">
+                            <img src="images/slide04.jpg" alt="img">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="intro_layers">
+                                            <div class="intro_layer" data-animation="fadeInRight">
+                                                <div class="d-inline-block">
+                                                    <h3 class="emptytext bigger text-uppercase">Marine</h3>
+                                                </div>
+                                                <div class="d-inline-block text-white mt-xl-3">
+                                                    <h4 class="bigger">Ecosystem Preservation<span class="color-main">.</span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- eof .intro_layers -->
+                                    </div>
+                                    <!-- eof .col-* -->
+                                </div>
+                                <!-- eof .row -->
+                            </div>
+                            <!-- eof .container-fluid -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- eof flexslider -->
+                <div class="custom-navigation flexslider-count-nav">
+                    <a href="#" class="flex-prev">
+						<svg width="50" height="10" viewBox="0 0 50 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0)">
+								<path d="M49.5 5C29.9738 5 20.0262 5 0.5 5L4.5 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+							</g>
+							<defs>
+								<clipPath id="clip0">
+									<rect width="50" height="9" transform="translate(0 0.5)" />
+								</clipPath>
+							</defs>
+						</svg>
+						<span class="flex-counter"></span>
+					</a>
+                    <a href="#" class="flex-next">
+						<span class="flex-counter"></span>
+						<svg width="50" height="10" viewBox="0 0 50 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip1)">
+								<path d="M0.5 5C20.0262 5 29.9738 5 49.5 5L45.5 9" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+							</g>
+							<defs>
+								<clipPath id="clip1">
+									<rect width="50" height="9" transform="translate(50 9.5) rotate(-180)" />
+								</clipPath>
+							</defs>
+						</svg>
+					</a>
+                </div>
+                <!-- <a href="#events" class="ico-link">
+					<i class="ico-mouse"></i>
+				</a> -->
+            </section>
+
+            <!-- <section class="slider-video container-px-0 overflow-visible">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="shortcode-video">
+                                <div class="custom-title">
+                                    <span>Presentation</span>
+                                </div>
+                                <div class="item-media cover-img-full ">
+                                    <img src="images/events/35.jpg" alt="img">
+                                    <div class="media-links">
+                                        <div class="links-wrap">
+                                            <a href="#" class="photoswipe-link photoswipe-link-button" data-iframe="https://www.youtube.com/embed/1kUE0BZtTRc" data-index="1"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+
+            <!--Events Start-->
+            <section id="events" class="ls c-gutter-0 container-px-0">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3">
+                            <div class="service-shortcode text-center ds position-relative">
+                                <a href="service-single.html">
+                                    <div class="cover-image image-back">
+                                        <img class="h-100 d-none" src="images/events/10.jpg" alt="img">
+                                    </div>
+                                    <div class="z-index-2 position-relative">
+                                        <i class="ico-wind fs-64 text-white"></i>
+                                        <h3 class="mt-2 mb-0 text-uppercase"><span data-content="Carbon" class="emptytext"
+                                                style="font-size: 35px;">Carbon</span></h3>
+                                        <h5 class="mt-1">Neutrality<span class="color-main2">.</span></h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <div class="service-shortcode text-center ds position-relative">
+                                <a href="service-single1.html">
+                                    <div class="cover-image image-back">
+                                        <img class="h-100 d-none" src="images/events/11.jpg" alt="img">
+                                    </div>
+                                    <div class="z-index-2 position-relative">
+                                        <i class="ico-water fs-64 text-white"></i>
+                                        <h3 class="mt-2 mb-0 text-uppercase"><span data-content="Water" class="emptytext" style="font-size: 35px;">WATER</span></h3>
+                                        <h5 class="mt-1">Sustainability<span class="color-main3">.</span></h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <div class="service-shortcode text-center ds position-relative">
+                                <a href="service-single2.html">
+                                    <div class="cover-image image-back">
+                                        <img class="h-100 d-none" src="images/events/12.jpg" alt="img">
+                                    </div>
+                                    <div class="z-index-2 position-relative">
+                                        <i class="ico-sun fs-64 text-white"></i>
+                                        <h3 class="mt-2 mb-0 text-uppercase"><span data-content="Environmental" class="emptytext" style="font-size: 23px;">ENVIRONMENTAL</span></h3>
+                                        <h5 class="mt-1">Conservation<span class="color-main4">.</span></h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <div class="service-shortcode text-center ds position-relative">
+                                <a href="service-single3.html">
+                                    <div class="cover-image image-back">
+                                        <img class="h-100 d-none" src="images/events/13.jpg" alt="img">
+                                    </div>
+                                    <div class="z-index-2 position-relative">
+                                        <i class="ico-flame fs-64 text-white"></i>
+                                        <h3 class="mt-2 mb-0 text-uppercase"><span data-content="Agricultural" class="emptytext" style="font-size: 25px;">AGRICULTURAL</span>
+                                        </h3>
+                                        <h5 class="mt-1">Innovation<span class="color-main">.</span></h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Events End-->
+
+            <!--About Start-->
+            <section id="about" class="ls s-py-90 s-pt-xl-150 s-pb-xl-130">
+                <div class="container">
+                    <!-- <div class="row align-center">
+                        <div class="col-lg-5 col-xl-5 offset-xl-1">
+                            <div class="img-shortcode leaf-wrap">
+                                <div class="leaf leaf-left about-1 animate animated" data-animation="fadeInRight" data-delay="150">
+                                    <img src="images/img-leaf-1.png" alt="img">
+                                </div>
+                                <div class="leaf leaf-right about-1 animate animated" data-animation="fadeInLeft" data-delay="150">
+                                    <img src="images/img-leaf-2.png" alt="img">
+                                </div>
+                                <div class="icon-box fs-32 d-inline-flex align-items-center justify-content-center">
+                                    <span class="iq-rotate-text">finding best use of all resources*</span>
+                                    <i class="ico color-main ico-quote"></i>
+                                </div>
+                                <img src="images/events/34.jpg" alt="img">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 offset-lg-1 col-xl-4 offset-xl-2">
+                            <div class="divider-50 divider-lg-0"></div>
+                            <h2 class="special-heading">
+                                <span>Investing in clean energy generation</span>
+                            </h2>
+                            <div class="divider-30 divider-lg-50"></div>
+                            <p>We’re among the world’s leading renewable energy solutions providers that is revolutionising and redefining the way sustainable energy sources are harnessed across the world. We are presented in many countries across the world.</p>
+                            <div class="divider-50"></div>
+                            <a class="btn btn-outline-dark" href="about.html">more about us</a>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+            <!--About End-->
+
+            <!--Banner Start-->
+            <section class="ls banner-section">
+                <div class="title-custom position-relative">
+                    <span class="emptytext color-darkgrey-light">Discover Our Vision</span>
+                </div>
+                <div class="title-custom right position-relative">
+                    <span class="color-darkgrey">Discover Our Vision</span>
+                </div>
+            </section>
+            <!--Banner End-->
+
+            <!--Steps Start-->
+            <section id="steps" class="ls s-py-90 s-py-xl-150 c-gutter-80 leaf-wrap overflow-visible with-leaf-2 parallax">
+                <div class="leaf-theme">
+                    <!-- <img class="parallax-layer" data-parallax-deep="100" src="images/leaf-3.png" alt="img"> -->
+                </div>
+                <div class="leaf leaf-bottom about-1 animate animated" data-animation="fadeInUp" data-delay="150">
+                    <img src="images/features-leaf.png" alt="img">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="icon-box">
+                                <h5 class="mb-3 position-relative">About us <span class="text-special ">01</span></h5>
+                                <p>
+                                    "At Equiblue Alliance, we unite cutting-edge technology with ecological principles to create sustainable
+                                    communities and preserve our planet for future generations."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="divider-60 divider-lg-0 divider-xl-80"></div>
+                            <div class="icon-box">
+                                <h5 class="mb-3 position-relative">Mission<span class="text-special ">02</span></h5>
+                                <p>
+                                    "Equiblue Alliance combines advanced technology with ecological principles to foster sustainable living
+                                    in diverse settings. Our focus extends from urban innovation to rural vitality, aiming to preserve our
+                                    planet for future generations."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 me-md-auto ms-md-auto">
+                            <div class="divider-60 divider-xl-160"></div>
+                            <div class="icon-box">
+                                <h5 class="mb-3 position-relative">Vision <span class="text-special ">03</span></h5>
+                                <p>
+                                    "Our vision is a future where ecological balance and technological progress coexist, enhancing the
+                                    quality of life in both urban and rural areas. We aim to set a global standard for sustainable living,
+                                    creating a legacy of harmony between humanity and nature."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Steps End-->
+
+            <!--Feature with video Start-->
+            <!-- <section id="features" class="ls">
+                <div class="cover-image s-cover-left photoswipe-link-button-wrap">
+                    <a href="#" class="photoswipe-link photoswipe-link-button" data-iframe="https://www.youtube.com/embed/1kUE0BZtTRc" data-index="1"></a>
+                    <img src="images/events/25.jpg" alt="img">
+                    <div class="slogan">Why choose us?</div>
+                </div>
+                <div class="container">
+                    <div class="col-lg-5 pull-right">
+                        <div class="divider-90 divider-xl-100"></div>
+                        <h2 class="special-heading">
+                            <span>We’re building a better future</span>
+                        </h2>
+                        <div class="divider-50"></div>
+                        <div id="accordion01" role="tablist">
+                            <div class="card">
+                                <div class="card-header" role="tab" id="collapse01_header">
+                                    <h5>
+                                        <a data-bs-toggle="collapse" href="#collapse01" aria-expanded="true" aria-controls="collapse01">
+											Best energy solutions
+										</a>
+                                    </h5>
+                                </div>
+
+                                <div id="collapse01" class="collapse show" role="tabpanel" aria-labelledby="collapse01_header" data-bs-parent="#accordion01">
+                                    <div class="card-body">
+                                        We know what we’re talking about. Over two decades of rich experience in the wind energy sector. Over 17,900 MW capacity.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab" id="collapse02_header">
+                                    <h5>
+                                        <a class="collapsed" data-bs-toggle="collapse" href="#collapse02" aria-expanded="false" aria-controls="collapse02">
+											End-to-end services
+										</a>
+                                    </h5>
+                                </div>
+                                <div id="collapse02" class="collapse" role="tabpanel" aria-labelledby="collapse02_header" data-bs-parent="#accordion01">
+                                    <div class="card-body">
+                                        We know what we’re talking about. Over two decades of rich experience in the wind energy sector. Over 17,900 MW capacity.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab" id="collapse03_header">
+                                    <h5>
+                                        <a class="collapsed" data-bs-toggle="collapse" href="#collapse03" aria-expanded="false" aria-controls="collapse03">
+											Global Expertise
+										</a>
+                                    </h5>
+                                </div>
+                                <div id="collapse03" class="collapse" role="tabpanel" aria-labelledby="collapse03_header" data-bs-parent="#accordion01">
+                                    <div class="card-body">
+                                        We know what we’re talking about. Over two decades of rich experience in the wind energy sector. Over 17,900 MW capacity.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider-lg-90 divider-xl-100"></div>
+                    </div>
+                </div>
+            </section> -->
+            <!--Feature with video Start-->
+
+            <!--Cases Start-->
+            <section id="cases" class="ls s-pt-90 s-pb-50 s-pt-xl-150 s-pb-xl-110">
+                <div class="container">
+                    <!-- <div class="row">
+                        <div class="col-12">
+                            <h2 class="special-heading">
+                                <span>Case studies</span>
+                            </h2>
+                            <div class="divider-30 divider-xl-50"></div>
+                        </div>
+                        <div class="col-xl-9">
+                            <div class="filters gallery-filters small-text text-lg-right pb-0">
+                                <a href="#" data-filter="*" class="active selected">All</a>
+                                <a href="#" data-filter=".wind_turbines">Wind turbines</a>
+                                <a href="#" data-filter=".solar_panels">Solar panels</a>
+                                <a href="#" data-filter=".bio_energy">Bio energy</a>
+                                <a href="#" data-filter=".water_energy">Water energy</a>
+                                <a href="#" data-filter=".others">Others</a>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 text-xl-end">
+                            <div class="divider-40 divider-xl-0"></div>
+                            <a class="btn btn-outline-dark" href="/case-tiled.html">See all cases</a>
+                        </div>
+                        <div class="col-12">
+                            <div class="divider-50"></div>
+
+                            <div class="row isotope-wrapper masonry-layout c-mb-40 c-gutter-40" data-filters=".gallery-filters">
+                                <div class="col-xl-4 col-md-6 wind_turbines">
+                                    <div class="vertical-item">
+                                        <div class="item-media">
+                                            <img src="images/gallery/13.jpg" alt="img">
+                                            <div class="media-links">
+                                                <div class="links-wrap">
+                                                    <a class="link-anchor" title="" href="case-single.html"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-content">
+                                            <h6 class="mb-2">
+                                                <a href="case-single.html">Windmill station in Ohio</a>
+                                            </h6>
+                                            <div class="small-text">
+                                                <a class="btn btn-default" href="#">Wind turbines</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-4 col-md-6 bio_energy water_energy">
+                                    <div class="vertical-item">
+                                        <div class="item-media">
+                                            <img src="images/gallery/14.jpg" alt="img">
+                                            <div class="media-links">
+                                                <div class="links-wrap">
+                                                    <a class="link-anchor" title="" href="case-single.html"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-content">
+                                            <h6 class="mb-2">
+                                                <a href="case-single.html">Energy station in Bemiji</a>
+                                            </h6>
+                                            <div class="small-text">
+                                                <a class="btn btn-default" href="#">Wind turbines</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-4 col-md-6 others solar_panels">
+                                    <div class="vertical-item">
+                                        <div class="item-media">
+                                            <img src="images/gallery/15.jpg" alt="img">
+                                            <div class="media-links">
+                                                <div class="links-wrap">
+                                                    <a class="link-anchor" title="" href="case-single.html"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-content">
+                                            <h6 class="mb-2">
+                                                <a href="case-single.html">Renewable energy station</a>
+                                            </h6>
+                                            <div class="small-text">
+                                                <a class="btn btn-default" href="#">Solar panels</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-4 col-md-6 water_energy others">
+                                    <div class="vertical-item">
+                                        <div class="item-media">
+                                            <img src="images/gallery/16.jpg" alt="img">
+                                            <div class="media-links">
+                                                <div class="links-wrap">
+                                                    <a class="link-anchor" title="" href="case-single.html"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-content">
+                                            <h6 class="mb-2">
+                                                <a href="case-single.html">Solar factory</a>
+                                            </h6>
+                                            <div class="small-text">
+                                                <a class="btn btn-default" href="#">Solar panels</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-4 col-md-6 wind_turbines water_energy">
+                                    <div class="vertical-item">
+                                        <div class="item-media">
+                                            <img src="images/gallery/18.jpg" alt="img">
+                                            <div class="media-links">
+                                                <div class="links-wrap">
+                                                    <a class="link-anchor" title="" href="case-single.html"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-content">
+                                            <h6 class="mb-2">
+                                                <a href="case-single.html">Electricity station</a>
+                                            </h6>
+                                            <div class="small-text">
+                                                <a class="btn btn-default" href="#">Wind turbines</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-4 col-md-6 solar_panels water_energy">
+                                    <div class="vertical-item">
+                                        <div class="item-media">
+                                            <img src="images/gallery/17.jpg" alt="img">
+                                            <div class="media-links">
+                                                <div class="links-wrap">
+                                                    <a class="link-anchor" title="" href="case-single.html"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-content">
+                                            <h6 class="mb-2">
+                                                <a href="case-single.html">Solar Field in Los Angeles</a>
+                                            </h6>
+                                            <div class="small-text">
+                                                <a class="btn btn-default" href="#">Solar panels</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+            <!--Cases End-->
+
+            <!--Testimonials Start-->
+            <section class="ls ms s-py-90 s-py-xl-150 overflow-visible with-leaf-1 parallax">
+                <div class="container">
+                    <div class="row align-center">
+                        <div class="col-lg-6">
+                            <h3 class="special-heading"><span>Meet our team <br></span></h3>
+                            <div class="divider-40 divider-lg-0"></div>
+                        </div>
+                        <div class="col-lg-6 d-inline-flex justify-content-lg-end">
+                            <div class="owl-custom-nav">
+                                <a href="#" class="owl-prev"></a>
+                                <a href="#" class="owl-next"></a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="divider-50"></div>
+                            <div class="owl-carousel owl-loaded owl-drag owl-theme" data-nav="false" data-loop="true"
+                                data-autoplay="false" data-margin="80" data-items="3" data-responsive-lg="3" data-responsive-md="2"
+                                data-responsive-sm="2" data-responsive-xs="1">
+                                <div class="vertical-item">
+                                    <div class="item-media">
+                                        <img src="images/team/02.jpg" alt="img">
+                                        <div class="media-links">
+                                            <!-- <a class="default-link" href="team-single.html"></a> -->
+                                        </div>
+                                    </div>
+                                    <div class="item-content pt-4">
+                                        <p class="small-text mb-2">Co-Founder</p>
+            
+                                        <h5 class="mt-1 mb-2">
+                                            <a href="team-single.html">Pallavi</a>
+                                        </h5>
+
+                                        <p class="small-text mb-2">Assistant Manager BNF
+</p>
+            
+                                        <p class="social-icons">
+
+                                            <p class="small-text mb-2">( Britannia industries limited, Bengaluru, Karnataka, India)
+
+</p>
+
+                                            
+                                        </p>
+
+                                        <a href="#" class="fa fa-linkedin border-icon rounded-icon" title="linkedin"></a>
+
+
+            
+                                    </div>
+                                </div>
+                                <div class="vertical-item">
+                                    <div class="item-media">
+                                        <img src="images/team/01.jpg" alt="img">
+                                        <div class="media-links">
+                                            <!-- <a class="default-link" href="team-single.html"></a> -->
+                                        </div>
+                                    </div>
+                                    <div class="item-content pt-4">
+                                        <p class="small-text mb-2">CTO</p>
+            
+                                        <h5 class="mt-1 mb-2">
+                                            <a href="team-single.html">Iliaya Raja</a>
+                                        </h5>
+            
+                                        <p class="social-icons">
+                                           <p class="small-text mb-2">( Founder/CEO at digisailor, Thoothukudi)</p>
+                                        </p>
+
+                                        <a href="#" class="fa fa-linkedin border-icon rounded-icon" title="linkedin"></a>
+            
+                                    </div>
+                                </div>
+                                
+                                <!-- <div class="vertical-item">
+                                    <div class="item-media">
+                                        <img src="images/team/07.jpg" alt="img">
+                                        <div class="media-links">
+                                            <a class="default-link" href="team-single.html"></a>
+                                        </div>
+                                    </div>
+                                    <div class="item-content pt-4">
+                                        <p class="small-text mb-2">sALES</p>
+            
+                                        <h5 class="mt-1 mb-2">
+                                            <a href="team-single.html">Barbara L. Delong</a>
+                                        </h5>
+            
+                                        <p class="social-icons">
+                                            <a href="https://www.facebook.com/" class="fa fa-facebook" title="facebook"></a>
+                                            <a href="#" class="fa fa-twitter" title="twitter"></a>
+                                            <a href="#" class="fa fa-linkedin" title="linkedin"></a>
+                                        </p>
+            
+                                    </div>
+                                </div> -->
+                                <!-- <div class="vertical-item">
+                                    <div class="item-media">
+                                        <img src="images/team/08.jpg" alt="img">
+                                        <div class="media-links">
+                                            <a class="default-link" href="team-single.html"></a>
+                                        </div>
+                                    </div>
+                                    <div class="item-content pt-4">
+                                        <p class="small-text mb-2">aDMINISTRATOR</p>
+            
+                                        <h5 class="mt-1 mb-2">
+                                            <a href="team-single.html">Marshall R. Hursey</a>
+                                        </h5>
+            
+                                        <p class="social-icons">
+                                            <a href="https://www.facebook.com/" class="fa fa-facebook" title="facebook"></a>
+                                            <a href="#" class="fa fa-twitter" title="twitter"></a>
+                                            <a href="#" class="fa fa-linkedin" title="linkedin"></a>
+                                        </p>
+            
+                                    </div>
+                                </div> -->
+                                <!-- <div class="vertical-item">
+                                    <div class="item-media">
+                                        <img src="images/team/09.jpg" alt="img">
+                                        <div class="media-links">
+                                            <a class="default-link" href="team-single.html"></a>
+                                        </div>
+                                    </div>
+                                    <div class="item-content pt-4">
+                                        <p class="small-text mb-2">Operator</p>
+            
+                                        <h5 class="mt-1 mb-2">
+                                            <a href="team-single.html">Heather F. Cox</a>
+                                        </h5>
+            
+                                        <p class="social-icons">
+                                            <a href="https://www.facebook.com/" class="fa fa-facebook" title="facebook"></a>
+                                            <a href="#" class="fa fa-twitter" title="twitter"></a>
+                                            <a href="#" class="fa fa-linkedin" title="linkedin"></a>
+                                        </p>
+            
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container" style="margin-top: 2%;">
+                        <div class="row align-center">
+                            <div class="col-lg-6">
+                                <h3 class="special-heading"><span>Advisory committee<br></span></h3>
+                                <div class="divider-40 divider-lg-0"></div>
+                            </div>
+                            <div class="col-lg-6 d-inline-flex justify-content-lg-end">
+                                <div class="owl-custom-nav">
+                                    <a href="#" class="owl-prev"></a>
+                                    <a href="#" class="owl-next"></a>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="divider-50"></div>
+                                <div class="owl-carousel owl-loaded owl-drag owl-theme" data-nav="false" data-loop="true"
+                                    data-autoplay="false" data-margin="80" data-items="3" data-responsive-lg="3" data-responsive-md="2"
+                                    data-responsive-sm="2" data-responsive-xs="1">
+                                    <div class="vertical-item">
+                                        <div class="item-media">
+                                            <img src="images/team/03.jpg" alt="img">
+                                            <div class="media-links">
+                                                <!-- <a class="default-link" href="team-single.html"></a> -->
+                                            </div>
+                                        </div>
+                                        <div class="item-content pt-4">
+                                            <!-- <p class="small-text mb-2">Advisory committee
+                                                        </p> -->
+                    
+                                            <h5 class="mt-1 mb-2">
+                                                <a href="team-single.html">Andy Thurai
+                                                </a>
+                                            </h5>
+                    
+                                            <p class="social-icons">
+                                            <p class="small-text mb-2">(VP & principal analysis) constellation research,Inc.)</p>
+                                            </p>
+                    
+                                            <a href="#" class="fa fa-linkedin border-icon rounded-icon" title="linkedin"></a>
+                    
+                                        </div>
+                                    </div>
+                                    <div class="vertical-item">
+                                        <div class="item-media">
+                                            <img src="images/team/04.jpg" alt="img">
+                                            <div class="media-links">
+                                                <!-- <a class="default-link" href="team-single.html"></a> -->
+                                            </div>
+                                        </div>
+                                        <div class="item-content pt-4">
+                                            <!-- <p class="small-text mb-2">Advisory committee
+                                                        </p> -->
+                    
+                                            <h5 class="mt-1 mb-2">
+                                                <a href="team-single.html">Aravind Kolappan
+                                                </a>
+                                            </h5>
+                    
+                                            <p class="social-icons">
+                                            <p class="small-text mb-2">( SaaS/IoT business solutions consultant)</p>
+                                            </p>
+                    
+                                            <a href="#" class="fa fa-linkedin border-icon rounded-icon" title="linkedin"></a>
+                    
+                                        </div>
+                                    </div>
+                                    <div class="vertical-item">
+                                        <div class="item-media">
+                                            <img src="images/team/01.jpg" alt="img">
+                                            <div class="media-links">
+                                                <!-- <a class="default-link" href="team-single.html"></a> -->
+                                            </div>
+                                        </div>
+                                        <div class="item-content pt-4">
+                                            <!-- <p class="small-text mb-2">Advisory committee
+                                                        </p> -->
+                    
+                                            <h5 class="mt-1 mb-2">
+                                                <a href="team-single.html">Dr. Ravindran
+                                                </a>
+                                            </h5>
+                    
+                                            <p class="social-icons">
+                                            <p class="small-text mb-2">( Chief operating officer at digisailor)
+                                            </p>
+                                            </p>
+                    
+                                            <a href="#" class="fa fa-linkedin border-icon rounded-icon" title="linkedin"></a>
+                    
+                                        </div>
+                                    </div>
+                                    <div class="vertical-item">
+                                        <div class="item-media">
+                                            <img src="images/team/06.jpg" alt="img">
+                                            <div class="media-links">
+                                                <!-- <a class="default-link" href="team-single.html"></a> -->
+                                            </div>
+                                        </div>
+                                        <div class="item-content pt-4">
+                                            <!-- <p class="small-text mb-2">Advisory committee
+                                                        </p> -->
+                    
+                                            <h5 class="mt-1 mb-2">
+                                                <a href="team-single.html">Muthukani Perumal
+                                                </a>
+                                            </h5>
+                    
+                                            <p class="social-icons">
+                                            <p class="small-text mb-2">(Assistant vice president, Citibank Singapore)</p>
+                                            </p>
+                    
+                                            <a href="#" class="fa fa-linkedin border-icon rounded-icon" title="linkedin"></a>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </section>
+
+            <section class="ls ms s-py-90 s-py-xl-150 overflow-visible with-leaf-1 parallax">
+                
+            </section>
+
+            
+            <!--Testimonials End-->
+
+            <!--Posts Start-->
+            <section id="posts" class="ls s-py-90 s-py-xl-150">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="special-heading">
+                                <span>Our stories</span>
+                            </h2>
+                            <div class="divider-30 divider-xl-50"></div>
+                        </div>
+                        
+                        <div class="col-xl-9">
+                            <!-- <div class="filters post-filters small-text text-lg-right pb-0">
+                                <a href="#" data-filter="*" class="active selected">All</a>
+                                <a href="#" data-filter=".wind_turbines">Wind turbines</a>
+                                <a href="#" data-filter=".solar_panels">Solar panels</a>
+                                <a href="#" data-filter=".bio_energy">Bio energy</a>
+                                <a href="#" data-filter=".water_energy">Water energy</a>
+                                <a href="#" data-filter=".others">Others</a>
+                            </div> -->
+                            <p style="font-weight: bold;">"Equiblue Alliance is spearheading a range of innovative projects, each tailored to address critical environmental
+                            challenges across various domains"</p>
+                        </div>
+                        <!-- <div class="col-xl-3 text-xl-end">
+                            <div class="divider-40 divider-xl-0"></div>
+                            <a class="btn btn-outline-dark" href="/blog-grid.html">See all news</a>
+                        </div> -->
+                        <div class="col-12">
+                            
+                            <div class="divider-50"></div>
+                            
+
+                            <div class="owl-carousel owl-drag owl-theme" data-nav="false" data-loop="false" data-autoplay="true" data-margin="40" data-items="1" data-responsive-lg="3" data-responsive-md="2" data-responsive-sm="2" data-responsive-xs="1" data-filters=".post-filters">
+
+                                <div class="owl-carousel-item wind_turbines">
+                                    <article class="vertical-item content-half-padding post type-post status-publish format-standard has-post-thumbnail">
+                                        <div class="item-media cover-img-full">
+                                            <img src="images/events/view-green-forest-trees-with-co2.jpg" alt="img">
+                                            <div class="media-links">
+                                                <div class="links-wrap">
+                                                    <a class="link-anchor" title="" href="service-single.html"></a>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="custom-date-wrap">
+                                                <div class="custom-date">
+                                                    <span>12</span>
+                                                    <span>apr</span>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        <div class="item-content">
+                                            <h6>
+                                                <!-- <a href="blog-single-left.html"> -->
+                                                    ● Carbon Neutrality
+												</a>
+                                            </h6>
+                                            <div class=" mb-0">
+                                                <span class="entry-author-wrap">
+													<span class="vcard author">
+														
+															<!-- <span>by admin</span> -->
+                                                            <p style="text-align:justify; font-size:medium;width: 100%; color: black;">Carbon-Neutral Village Initiative (Tamil Nadu, India): Equiblue Alliance is at the forefront of ushering in an era of
+                                                            carbon neutrality in Tamil Nadu's villages. Our initiative employs innovative and affordable technology to streamline
+                                                            carbon tracking, transforming the way communities manage and reduce their carbon footprint.</p>
+                                                </a>
+                                                </span>
+                                                <!-- .author -->
+                                                </span>
+                                                <!-- <span>
+													<i class="ico-rye" aria-hidden="true"></i>
+													<span class="item-views-count">74</span>
+                                                <span class="ml-1 item-views-word"></span>
+                                                </span>
+                                                <span>
+													<span>
+														<a href="#" class="like_button like_active_button">
+															<i class="ico-heart" aria-hidden="true"></i>
+														</a>
+													</span>
+                                                <span class="votes_count votes_count_314">
+														<span class="item-likes-count">12</span>
+                                                <span class="item-likes-word"></span>
+                                                </span>
+                                                </span>
+                                                <span class="comments-link">
+													<i class="ico-comment"></i>
+													<span class="screen-reader-text">25</span>
+                                                <a href="blog-single-left.html">31</a>
+                                                </span> -->
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <!-- #post-## -->
+                                </div>
+
+                                <div class="owl-carousel-item bio_energy water_energy">
+                                    <article class="vertical-item content-half-padding post type-post status-publish format-standard has-post-thumbnail">
+                                        <div class="item-media cover-img-full">
+                                            <img src="images/events/earth-day-environment-concept-eco-concept.jpg" alt="img">
+                                            <div class="media-links">
+                                                <div class="links-wrap">
+                                                    <a class="link-anchor" title="" href="service-single1.html"></a>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="custom-date-wrap">
+                                                <div class="custom-date">
+                                                    <span>02</span>
+                                                    <span>apr</span>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        <div class="item-content">
+                                            <h6>
+                                                <!-- <a href="blog-single-left.html"> -->
+                                                    ● Water Sustainability
+												</a>
+                                            </h6>
+                                            <div class="mb-0">
+                                                <span class="entry-author-wrap">
+													<span class="vcard author">
+														<!-- <a href="#" title="Posts by admin" rel="author">
+															<span>by admin</span> -->
+                                                            <p style="text-align:justify; font-size:medium;width: 100%;color: black;">Water-Positive Villages: Every Drop Counts: Equiblue Alliance's vision in water sustainability is embodied in our
+                                                            Water-Positive Villages project. By leveraging advanced AI for water monitoring, along with smart meters and
+                                                            cutting-edge recycling techniques, we're poised to turn the tide on water scarcity. </p>
+                                                </a>
+                                                </span>
+                                                <!-- .author -->
+                                                </span>
+                                                <!-- <span>
+													<i class="ico-rye" aria-hidden="true"></i>
+													<span class="item-views-count">56</span>
+                                                <span class="ml-1 item-views-word"></span>
+                                                </span>
+                                                <span>
+													<span>
+														<a href="#" class="like_button like_active_button">
+															<i class="ico-heart" aria-hidden="true"></i>
+														</a>
+													</span>
+                                                <span class="votes_count votes_count_314">
+														<span class="item-likes-count">9</span>
+                                                <span class="item-likes-word"></span>
+                                                </span>
+                                                </span>
+                                                <span class="comments-link">
+													<i class="ico-comment"></i>
+													<span class="screen-reader-text">25</span>
+                                                <a href="blog-single-left.html">31</a>
+                                                </span> -->
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <!-- #post-## -->
+                                </div>
+
+                                <div class="owl-carousel-item others solar_panels">
+                                    <article class="vertical-item content-half-padding post type-post status-publish format-standard has-post-thumbnail">
+                                        <div class="item-media cover-img-full">
+                                            <img src="images/events/close-up-soil-sprout.jpg" alt="img">
+                                            <div class="media-links">
+                                                <div class="links-wrap">
+                                                    <a class="link-anchor" title="" href="service-single2.html"></a>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="custom-date-wrap">
+                                                <div class="custom-date">
+                                                    <span>29</span>
+                                                    <span>mar</span>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        <div class="item-content">
+                                            <h6>
+                                                <!-- <a href="blog-single-left.html"> -->
+                                                    ● Environmental Conservation
+												</a>
+                                            </h6>
+                                            <div class="mb-0">
+                                                <span class="entry-author-wrap">
+													<span class="vcard author">
+														<!-- <a href="#" title="Posts by admin" rel="author">
+															<span>by admin</span> -->
+                                                            <p style="text-align:justify; font-size:medium;width: 100%;color: black;">Carbon Emission Accounting (Kelantan, Malaysia): In the lush forests of Kelantan, Malaysia, Equiblue Alliance is
+                                                            pioneering an environmentally transformative project. We're implementing a comprehensive approach to carbon emission
+                                                            accounting, aiming to empower communities and safeguard our environment.</p>
+                                                </a>
+                                                </span>
+                                                <!-- .author -->
+                                                </span>
+                                                <!-- <span>
+													<i class="ico-rye" aria-hidden="true"></i>
+													<span class="item-views-count">46</span>
+                                                <span class="ml-1 item-views-word"></span>
+                                                </span>
+                                                <span>
+													<span>
+														<a href="#" class="like_button like_active_button">
+															<i class="ico-heart" aria-hidden="true"></i>
+														</a>
+													</span>
+                                                <span class="votes_count votes_count_314">
+														<span class="item-likes-count">18</span>
+                                                <span class="item-likes-word"></span>
+                                                </span>
+                                                </span>
+                                                <span class="comments-link">
+													<i class="ico-comment"></i>
+													<span class="screen-reader-text">25</span>
+                                                <a href="blog-single-left.html">22</a>
+                                                </span> -->
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <!-- #post-## -->
+                                </div>
+
+                                <div class="owl-carousel-item water_energy others">
+                                    <article class="vertical-item content-half-padding post type-post status-publish format-standard has-post-thumbnail">
+                                        <div class="item-media cover-img-full">
+                                            <img src="images/events/vertical-photo-young-man-wearing-vr-set-holding-tomato-basket.jpg" alt="img">
+                                            <div class="media-links">
+                                                <div class="links-wrap">
+                                                    <a class="link-anchor" title="" href="service-single3.html"></a>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="custom-date-wrap">
+                                                <div class="custom-date">
+                                                    <span>21</span>
+                                                    <span>apr</span>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        <div class="item-content">
+                                            <h6>
+                                                <!-- <a href="blog-single-left.html"> -->
+                                                    ● Agricultural Innovation
+												</a>
+                                            </h6>
+                                            <div class="mb-0">
+                                                <span class="entry-author-wrap">
+													<span class="vcard author">
+														<!-- <a href="#" title="Posts by admin" rel="author">
+															<span>by admin</span> -->
+                                                            <p style="text-align:justify; font-size:medium;width: 100%;color: black;">Sustainable Agriculture (Malaysia): Equiblue Alliance's sustainable agriculture project in Malaysia represents a fusion
+                                                            of tradition and innovation. Focusing on rice cultivation, we integrate Climate-Smart Agriculture with
+                                                            resource-efficient technologies.</p>
+                                                </a>
+                                                </span>
+                                                <!-- .author -->
+                                                </span>
+                                                <!-- <span>
+													<i class="ico-rye" aria-hidden="true"></i>
+													<span class="item-views-count">74</span>
+                                                <span class="ml-1 item-views-word"></span>
+                                                </span>
+                                                <span>
+													<span>
+														<a href="#" class="like_button like_active_button">
+															<i class="ico-heart" aria-hidden="true"></i>
+														</a>
+													</span>
+                                                <span class="votes_count votes_count_314">
+														<span class="item-likes-count">12</span>
+                                                <span class="item-likes-word"></span>
+                                                </span>
+                                                </span>
+                                                <span class="comments-link">
+													<i class="ico-comment"></i>
+													<span class="screen-reader-text">25</span>
+                                                <a href="blog-single-left.html">31</a>
+                                                </span> -->
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <!-- #post-## -->
+                                </div>
+
+                                <div class="owl-carousel-item wind_turbines water_energy">
+                                    <article class="vertical-item content-half-padding post type-post status-publish format-standard has-post-thumbnail">
+                                        <div class="item-media cover-img-full">
+                                            <img src="images/events/vertical-shot-male-swimming-underwater-with-sky-background.jpg" alt="img">
+                                            <div class="media-links">
+                                                <div class="links-wrap">
+                                                    <a class="link-anchor" title="" href="service-single4.html"></a>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="custom-date-wrap">
+                                                <div class="custom-date">
+                                                    <span>28</span>
+                                                    <span>apr</span>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        <div class="item-content">
+                                            <h6>
+                                                <!-- <a href="blog-single-left.html"> -->
+                                                    ● Marine Ecosystem Preservation
+												</a>
+                                            </h6>
+                                            <div class="mb-0">
+                                                <span class="entry-author-wrap">
+													<span class="vcard author">
+														<!-- <a href="#" title="Posts by admin" rel="author">
+															<span>by admin</span> -->
+                                                            <p style="text-align:justify; font-size:medium;width: 100%;color: black;">Oyster Culture - Pearls of Sustainability: The Oyster Culture project by Equiblue Alliance is more than aquaculture;
+                                                            it's a commitment to marine ecosystem preservation. Through this initiative, we're not just cultivating oysters but also
+                                                            nurturing marine biodiversity and supporting local communities.</p>
+                                                </a>
+                                                </span>
+                                                <!-- .author -->
+                                                </span>
+                                                <!-- <span>
+													<i class="ico-rye" aria-hidden="true"></i>
+													<span class="item-views-count">56</span>
+                                                <span class="ml-1 item-views-word"></span>
+                                                </span>
+                                                <span>
+													<span>
+														<a href="#" class="like_button like_active_button">
+															<i class="ico-heart" aria-hidden="true"></i>
+														</a>
+													</span>
+                                                <span class="votes_count votes_count_314">
+														<span class="item-likes-count">9</span>
+                                                <span class="item-likes-word"></span>
+                                                </span>
+                                                </span>
+                                                <span class="comments-link">
+													<i class="ico-comment"></i>
+													<span class="screen-reader-text">0</span>
+                                                <a href="blog-single-left.html">31</a>
+                                                </span> -->
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <!-- #post-## -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Posts End-->
+
+            <!--Firms Start-->
+            <section class="ls ls">
+                <div class="container">
+                    <div class="col-12">
+                        <h3 class="special-heading">
+                            <span>Our Collaborative Network</span>
+                        </h3>
+                        <div class="divider-30 divider-xl-50"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="firm-shortcode">
+                                <div>
+                                    <a href="#">
+                                        <img src="images/firm/CNetwork Logo-02.png" alt="firm">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <img src="images/firm/CNetwork Logo-07.png" alt="firm">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <img src="images/firm/CNetwork Logo-03.png" alt="firm">
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--Firms End-->
+            <section class="ls s-py-90 s-py-xl-150 about-2 leaf-wrap">
+                <div class="leaf leaf-top animate" data-animation="fadeInDown" data-delay="150">
+                    <img src="images/about-leaf-2.png" alt="img">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="special-heading">
+                                <span>Collaborate with Us</span>
+                                
+                            </h3>
+                            
+                            
+                            <div class="divider-50 divider-xl-60"></div>
+                            <p style="font-weight: bold;">Equiblue Alliance welcomes partnerships with organizations that share our vision of a
+                                sustainable future. Partnering
+                                with us provides an opportunity to engage in ground-breaking environmental projects, leveraging innovative
+                                technology
+                                and ecological practices.</p>
+                                <p style="font-weight: bold;">Here's how organizations can collaborate with Equiblue Alliance:</p>                             
+                            
+                            
+                            <div class="collapse_shortcode">
+                                
+                                <div class="collapse_shortcode-item">
+                                    <div class="collapse_shortcode-item-title">
+                                        <h4>
+                                            <a href="#multiCollapseExample1" aria-controls="multiCollapseExample1"
+                                                data-bs-toggle="collapse" role="button" aria-expanded="false">
+                                                Joint Ventures in Sustainability Projects:</a>
+                                        </h4>
+                                    </div>
+                                    <div class="collapse_shortcode-item-content collapse multi-collapse show"
+                                        id="multiCollapseExample1">
+                                        <div class="content">
+                                            Collaborate on specific sustainability initiatives such as carbon-neutral villages, water conservation, and sustainable
+                                            agriculture. Partners can contribute expertise, resources, or technology to these projects.
+                                        </div>
+                                        <ul class="list"></ul>
+                                    </div>
+                                </div>
+                                <div class="collapse_shortcode-item">
+                                    <div class="collapse_shortcode-item-title">
+                                        <h4>
+                                            <a href="#multiCollapseExample2" aria-controls="multiCollapseExample2"
+                                                data-bs-toggle="collapse" role="button" aria-expanded="false">
+                                                Research and Development Collaboration: </a>
+                                        </h4>
+                                    </div>
+                                    <div class="collapse_shortcode-item-content multi-collapse collapse show"
+                                        id="multiCollapseExample2">
+                                        <div class="content">
+                                            Work together on developing new technologies or methodologies that advance sustainability goals. This can include
+                                            AI-driven environmental solutions, sustainable agricultural practices, or conservation techniques.
+                                        </div>
+                                        <ul class="list"></ul>
+                                    </div>
+                                </div>
+                                <div class="collapse_shortcode-item">
+                                    <div class="collapse_shortcode-item-title">
+                                        <h4>
+                                            <a href="#multiCollapseExample3" aria-controls="multiCollapseExample3"
+                                                data-bs-toggle="collapse" role="button" aria-expanded="false">
+                                            Corporate Social Responsibility Initiatives: </a>
+                                        </h4>
+                                    </div>
+                                    <div class="collapse_shortcode-item-content multi-collapse collapse show"
+                                        id="multiCollapseExample3">
+                                        <div class="content">
+                                            Align your CSR objectives with Equiblue Alliance's projects. This can range from funding initiatives to providing
+                                            technical support or manpower for ongoing projects.
+                                        </div>
+                                        <ul class="list"></ul>
+                                    </div>
+                                    
+                                </div>
+                                <div class="collapse_shortcode-item">
+                                    <div class="collapse_shortcode-item-title">
+                                        <h4>
+                                            <a href="#multiCollapseExample4" aria-controls="multiCollapseExample4" data-bs-toggle="collapse"
+                                                role="button" aria-expanded="false">
+                                                Technology and Knowledge Exchange:</a>
+                                        </h4>
+                                    </div>
+                                    <div class="collapse_shortcode-item-content multi-collapse collapse show" id="multiCollapseExample4">
+                                        <div class="content">
+                                            Engage in mutual exchange of technology, insights, and best practices in the field of sustainability. This could include
+                                            workshops, seminars, and joint research publications.
+                                        </div>
+                                        <ul class="list"></ul>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--Contacts Start-->
+            <!-- <section class="ls s-pt-90 s-pt-xl-150">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-xl-5">
+                            <p class="special-heading text-uppercase color-dark small-text">
+                                <span>Contacts</span>
+                            </p>
+                            <div class="divider-40 divider-xl-50"></div>
+                            <h6 class="special-heading">
+                                <span>1116 15th St, Sacramento, California, CA 95814, USA</span>
+                            </h6>
+                            <h6 class="special-heading my-3">
+                                <span><a href="tel:08001234567">0800 123 4567</a>, <a href="tel:08001234566">0800 123 4566</a></span>
+                            </h6>
+                            <h6 class="special-heading">
+                                <span><a href="/cdn-cgi/l/email-protection#2247414d5650434c4662515752524d50560c414d4f"><span class="__cf_email__" data-cfemail="9bfef8f4efe9faf5ffdbe8eeebebf4e9efb5f8f4f6">[email&#160;protected]</span></a>, <a href="#"><span class="__cf_email__" data-cfemail="2247414d5650434c46624b4c444d0c414d4f">[email&#160;protected]</span></a></span>
+                            </h6>
+                        </div>
+                        <div class="col-lg-6 offset-xl-1">
+                            <div class="divider-40 divider-lg-0"></div>
+                            <form class="contact-form c-gutter-40 c-mb-30" method="post" action="/">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <p class="contact-form-name form-group has-placeholder">
+                                            <label for="name">Full name</label>
+                                            <i class="ico-user color-darkgrey"></i>
+                                            <input type="text" aria-required="true" size="30" value="" id="name" name="name" class="form-control" placeholder="Full name">
+                                        </p>
+                                        <p class="contact-form-email form-group has-placeholder">
+                                            <label for="email">Email address</label>
+                                            <i class="ico-send color-darkgrey"></i>
+                                            <input type="email" aria-required="true" size="30" value="" id="email" name="email" class="form-control" placeholder="Email address">
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <p class="contact-form-message form-group has-placeholder mt-30 mt-lg-0">
+                                            <label for="message">Your message</label>
+                                            <i class="ico-pencil color-darkgrey"></i>
+                                            <textarea aria-required="true" rows="4" cols="30" name="message" id="message" class="form-control" placeholder="Your message"></textarea>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <p class="form-group mt-50">
+                                            <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes">
+                                            <label for="wp-comment-cookies-consent">I agree with the terms of the Service Agreement
+												and I accept Privacy Policy</label>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <p class="contact-form-submit mt-50">
+                                            <button type="submit" name="contact_submit" class="btn btn-outline-dark btn-medium w-100">
+												Send
+												Message
+											</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            <!--Contacts End-->
+
+            <!--Features Start-->
+            <section class="ls texture-1 s-pt-90 s-pb-30 s-pt-xl-150 s-pb-xl-90 c-mb-60">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-sm-6 col-lg-3 text-center">
+                            <div class="icon-box d-inline-flex align-items-center justify-content-center">
+                                <span class="iq-rotate-text">THOUSANDS OF PROJECTS DONE * GOECO * </span>
+                                <h3 class="special-heading text-uppercase counter-wrap d-flex">
+                                    <span class="counter emptytext color-main" data-from="0" data-to="6" data-speed="1500">0</span>
+                                    <span class="counter-add emptytext color-main">k</span>
+                                </h3>
+                            </div>
+                            <p class="small-text color-darkgrey mb-1 mt-2">Completed</p>
+                            <h5 class="mt-0">Projects</h5>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-3 text-center">
+                            <div class="icon-box d-inline-flex align-items-center justify-content-center">
+                                <span class="iq-rotate-text">cLIENTS ARE HAPPY * WITH OUR SERVICE * </span>
+                                <h3 class="special-heading text-uppercase counter-wrap d-flex">
+                                    <span class="counter emptytext color-main" data-from="0" data-to="4" data-speed="1500">0</span>
+                                    <span class="counter-add emptytext color-main">k</span>
+                                </h3>
+                            </div>
+                            <p class="small-text color-darkgrey mb-1 mt-2">Satisfied</p>
+                            <h5 class="mt-0">Customers</h5>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-3 text-center">
+                            <div class="icon-box d-inline-flex align-items-center justify-content-center">
+                                <span class="iq-rotate-text">oUR WORK is * APPRECIATED BY PRO ECO * </span>
+                                <h3 class="special-heading text-uppercase counter-wrap d-flex">
+                                    <span class="counter emptytext color-main" data-from="0" data-to="18" data-speed="1500">0</span>
+                                </h3>
+                            </div>
+                            <p class="small-text color-darkgrey mb-1 mt-2">Earned</p>
+                            <h5 class="mt-0">Awards</h5>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-3 text-center">
+                            <div class="icon-box d-inline-flex align-items-center justify-content-center">
+                                <span class="iq-rotate-text">hUGE EXPERIENCE TESTED BY TIME*CLIENT </span>
+                                <h3 class="special-heading text-uppercase counter-wrap d-flex">
+                                    <span class="counter emptytext color-main" data-from="0" data-to="25" data-speed="1500">0</span>
+                                </h3>
+                            </div>
+                            <p class="small-text color-darkgrey mb-1 mt-2">Years</p>
+                            <h5 class="mt-0">Experience</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Features End-->
+
+            <!-- <section class="before-footer before-footer1">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-12 text-center text-xl-start">
+                            <div class="cs">
+                                <div class="title-custom-footer">
+                                    <h6 class="emptytext">24/7</h6>
+                                </div>
+                                <div class="before-footer-content d-xl-flex align-items-center">
+                                    <div class="mb-4 mb-xl-0">
+                                        <h4 class="special-heading mb-2">
+                                            <span>
+												<span class="text-white">Still have any questions?</span> Get a free consultancy!
+                                            </span>
+                                        </h4>
+                                        <p>You can contact us through phone: <a href="tel:+08001234567">0800 123 4567</a> or email:
+                                            <a href="/cdn-cgi/l/email-protection#6104020e1513000f0521121411110e13154f020e0c"><span class="__cf_email__" data-cfemail="95f0f6fae1e7f4fbf1d5e6e0e5e5fae7e1bbf6faf8">[email&#160;protected]</span></a></p>
+                                    </div>
+                                    <div class="text-xl-end flex-grow-1">
+                                        <a class="btn btn-white" href="">Request a quote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+
+            <footer class="page_footer ds ms s-py-90 s-py-xl-150 c-gutter-60 dark-gradient leaf-wrap overflow-visible">
+                <div class="leaf leaf-left animate animated" data-animation="fadeInUp" data-delay="150">
+                    <img src="images/footer-leaf-1.png" alt="img">
+                </div>
+                <div class="leaf leaf-right animate animated" data-animation="fadeInUp" data-delay="150">
+                    <img src="images/footer-leaf-2.png" alt="img">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="divider-xl-80"></div>
+                        </div>
+                        <div class="col-md-6 col-xl-2 animate" data-animation="fadeInUp">
+                            <div class="widget widget_nav_menu">
+
+                                <h3 class="widget-title">Useful links</h3>
+
+                                <div class="menu-container">
+
+                                    <ul class="menu">
+
+                                        <li class="menu-item">
+                                            <a href="index.html">
+												Home
+											</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="services.html">
+												Projects
+											</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="contact4.html">
+												Contact
+											</a>
+                                        </li>
+                                        <!-- <li class="menu-item">
+                                            <a href="service-single.html">
+												Fossil Resources
+											</a>
+                                        </li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="divider-60 divider-xl-0"></div>
+                        </div>
+                        <!-- <div class="col-md-6 col-xl-2 animate" data-animation="fadeInUp">
+                            <div class="widget widget_nav_menu">
+
+                                <h3 class="widget-title">Support</h3>
+
+                                <div class="menu-container">
+
+                                    <ul class="menu">
+
+                                        <li class="menu-item">
+                                            <a href="#">
+												Terms & Conditions
+											</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">
+												Shipping Policy
+											</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">
+												Delivery Tips
+											</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">
+												Returns
+											</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="divider-60 divider-xl-0"></div>
+                        </div> -->
+                        <div class="col-md-6 col-xl-2 animate" data-animation="fadeInUp" style="margin-left: 11%;">
+                            <div class="widget widget_nav_menu" >
+
+                                <h3 class="widget-title">Contact US</h3>
+
+                                <div class="menu-container">
+
+                                    <ul class="menu">
+
+                                        <h6 class="special-heading">
+                                            <span style="font-size: medium;">64, Santhini Nagar, KTC Nagar, Palayamkottai, Tirunelveli, 627011.
+</span>
+                                        </h6>
+
+                                        <h6 class="special-heading my-3">
+                                            <span style="font-size: medium;"><a href="tel: +91-9578980260 ">+91 9578980260</a></span>
+                                        </h6>
+
+                                        <h6 class="special-heading">
+                                            <span style="font-size: medium; "><a href="mailto:contact@equiblue.org
+"><span class="__cf_email__"
+                                                        data-cfemail="9bfef8f4efe9faf5ffdbe8eeebebf4e9efb5f8f4f6">contact@equiblue.org
+</span></a></span>
+                                        </h6>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="divider-60 divider-md-0"></div>
+                        </div>
+                        <div class="col-md-6 col-xl-5 offset-xl-1 animate" data-animation="fadeInUp">
+                            <div class="widget widget_nav_menu">
+                            <div class="">
+                                <a href="./" class="logo">
+                                    <img src="images/Website Logo white-06.png" alt="img" style="margin-top: -13%;margin-left: -13%;">
+                                </a>
+                            
+                            </div>
+
+                                <h3 class="widget-title" style="margin-top: 5%;"></h3>
+
+                               <p  style="margin-left: 17%;">"Equiblue Alliance is spearheading a range of innovative projects, each tailored to address critical environmental
+                            challenges across various domains"</p>
+
+                            </div>
+
+                            <div class="divider-50"></div>
+
+                            <p class="social-icons" style="margin-left: 17%;">
+
+                                <a href="https://www.facebook.com/" class="fa fa-facebook border-icon rounded-icon" title="facebook"></a>
+                                <a href="#" class="fa fa-twitter border-icon rounded-icon" title="twitter"></a>
+                                <a href="#" class="fa fa-linkedin border-icon rounded-icon" title="linkedin"></a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+            <section class="page_copyright ls s-py-25">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-12 text-center">
+                            <p class="color-dark">Copyright &copy; <span class="copyright_year">2021</span> All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+        <!-- eof #box_wrapper -->
+    </div>
+    <!-- eof #canvas -->
+
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/vendor/affix.js"></script>
+    <script src="js/vendor/jquery.appear.js"></script>
+    <script src="js/vendor/jquery.cookie.js"></script>
+    <script src="js/vendor/jquery.easing.1.3.js"></script>
+    <script src="js/vendor/jquery.hoverIntent.js"></script>
+    <script src="js/vendor/superfish.js"></script>
+    <script src="js/vendor/bootstrap-progressbar.min.js"></script>
+    <script src="js/vendor/jquery.countdown.min.js"></script>
+    <script src="js/vendor/jquery.countTo.js"></script>
+    <script src="js/vendor/jquery.easypiechart.min.js"></script>
+    <script src="js/vendor/jquery.scrollbar.min.js"></script>
+    <script src="js/vendor/jquery.localScroll.min.js"></script>
+    <script src="js/vendor/jquery.scrollTo.min.js"></script>
+    <script src="js/vendor/jquery.ui.totop.js"></script>
+    <script src="js/vendor/jquery.parallax-1.1.3.js"></script>
+    <script src="js/vendor/isotope.pkgd.min.js"></script>
+    <script src="js/vendor/jquery.flexslider-min.js"></script>
+    <script src="js/vendor/owl.carousel.min.js"></script>
+    <script src="js/vendor/photoswipe.js"></script>
+    <script src="js/vendor/photoswipe-ui-default.min.js"></script>
+    <script src="js/vendor/jflickrfeed.min.js"></script>
+    <script src="js/vendor/spectragram.min.js"></script>
+    <script src="twitter/jquery.tweet.js"></script>
+    <script src="js/vendor/circletype.min.js"></script>
+    <script src="js/vendor/jquery.marquee.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/switcher.js"></script>
+
+</body>
+
+</html>
